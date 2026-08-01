@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef, useCallback } from "react";
-import image from '../public/Jatin_Baga.jpeg'; 
+// import image from '../public/Jatin_Baga.jpeg'; 
 
 /* ============================================
    DATA
@@ -599,7 +599,7 @@ function About() {
             <TiltCard>
               <GlowCard className="glass rounded-2xl sm:rounded-[2.5rem] aspect-[4/5] flex items-center justify-center mb-6 overflow-hidden">
                 <img
-                  src={person.src}
+                  src="/Jatin_Baga.jpeg"
                   alt="Jatin Verma"
                   className="h-full w-full object-cover"
                 />
