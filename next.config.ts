@@ -1,6 +1,6 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
-const isProd = process.env.NODE_ENV === 'production';
+// const isProd = process.env.NODE_ENV === 'production';
 
 // const nextConfig: NextConfig = {
 //   basePath: "/portfolio",
@@ -11,12 +11,12 @@ const isProd = process.env.NODE_ENV === 'production';
 
 // export default nextConfig;
 
-const nextConfig = {
+const nextConfig: NextConfig = {
   output: 'export', // Outputs a static 'out' folder instead of a Node server
-  basePath: isProd ? '/portfolio' : '', 
+  basePath: process.env.PAGES_BASE_PATH,
   images: {
     unoptimized: true, // GitHub Pages does not support the default Next.js image optimization API
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
