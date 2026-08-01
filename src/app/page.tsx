@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState, useRef, useCallback } from "react";
 // import image from '../public/Jatin_Baga.jpeg'; 
 
@@ -456,9 +457,9 @@ function HeroCode() {
         <span className="w-3 h-3 rounded-full bg-[#e17055]" />
         <span className="w-3 h-3 rounded-full bg-[#fdcb6e]" />
         <span className="w-3 h-3 rounded-full bg-[#00b894]" />
-        <span className="ml-auto font-[family-name:var(--font-jetbrains-mono)] text-[10px] text-[rgba(235,235,235,0.3)]">
+        {/* <span className="ml-auto font-[family-name:var(--font-jetbrains-mono)] text-[10px] text-[rgba(235,235,235,0.3)]">
           appatacker.py
-        </span>
+        </span> */}
       </div>
       <pre className="p-4 sm:p-5 font-[family-name:var(--font-jetbrains-mono)] text-[11px] sm:text-sm leading-relaxed overflow-x-auto min-h-[240px] sm:min-h-[280px]">
         {codeLines.map((line, i) => (
@@ -598,10 +599,13 @@ function About() {
           <div className="lg:col-span-2 animate-on-scroll">
             <TiltCard>
               <GlowCard className="glass rounded-2xl sm:rounded-[2.5rem] aspect-[4/5] flex items-center justify-center mb-6 overflow-hidden">
-                <img
+                <Image
                   src="/Jatin_Baga.jpeg"
                   alt="Jatin Verma"
+                  width={800}
+                  height={1000}
                   className="h-full w-full object-cover"
+                  unoptimized
                 />
               </GlowCard>
             </TiltCard>
