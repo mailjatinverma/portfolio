@@ -4,6 +4,9 @@ import Image from "next/image";
 import { useEffect, useState, useRef, useCallback } from "react";
 // import image from '../public/Jatin_Baga.jpeg'; 
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || process.env.PAGES_BASE_PATH || "";
+const profileImageSrc = `${basePath}/Jatin_Baga.jpeg`;
+
 /* ============================================
    DATA
    ============================================ */
@@ -600,7 +603,7 @@ function About() {
             <TiltCard>
               <GlowCard className="glass rounded-2xl sm:rounded-[2.5rem] aspect-[4/5] flex items-center justify-center mb-6 overflow-hidden">
                 <Image
-                  src="/Jatin_Baga.jpeg"
+                  src={profileImageSrc}
                   alt="Jatin Verma"
                   width={800}
                   height={1000}
